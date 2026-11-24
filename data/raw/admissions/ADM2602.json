@@ -1,0 +1,46 @@
+{
+ "admission_id": "ADM2602",
+ "mrn": "MRN100002",
+ "ward": "Phoenix",
+ "consultant": "Dr C. Placeholder",
+ "admitted_at": "2026-11-04T10:00",
+ "discharged_at": "2026-11-08T15:00",
+ "reason_for_admission": "Hypertensive urgency",
+ "diagnoses": [
+  {
+   "text": "Hypertensive urgency",
+   "icd10": "I16.0"
+  },
+  {
+   "text": "Prediabetes",
+   "icd10": null
+  },
+  {
+   "text": "Obesity",
+   "icd10": "E66.9"
+  }
+ ],
+ "procedures": [],
+ "clinical_notes": [
+  "Presented with blood pressure 196/112 mmHg and headache; no evidence of end-organ damage on ECG, bloods or fundoscopy.",
+  "Treated with oral amlodipine; blood pressure reduced gradually over 24 hours.",
+  "Blood pressure 148/88 mmHg at discharge; adherence counselling given."
+ ],
+ "medication_changes": [
+  {
+   "drug": "Amlodipine 5 MG",
+   "change": "started",
+   "reason": "blood pressure control"
+  },
+  {
+   "drug": "Paracetamol 500 MG",
+   "change": "started",
+   "reason": "symptomatic relief"
+  }
+ ],
+ "allergies": [
+  "No known drug allergies"
+ ],
+ "follow_up": "GP review in 2 weeks; repeat bloods at GP.",
+ "pending_results": []
+}

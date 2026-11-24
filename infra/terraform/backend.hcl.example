@@ -1,0 +1,6 @@
+# Copy to backend.hcl (git-ignored). Create the bucket once with versioning + encryption on.
+bucket       = "CHANGE-ME-tfstate-<account-id>"
+key          = "healthcare-genai-platform/dev.tfstate"
+region       = "eu-west-1"
+encrypt      = true
+use_lockfile = true # S3-native state locking (Terraform >= 1.10 / OpenTofu >= 1.8 use dynamodb_table instead)

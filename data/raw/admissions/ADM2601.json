@@ -1,0 +1,46 @@
+{
+ "admission_id": "ADM2601",
+ "mrn": "MRN100001",
+ "ward": "St Brigid's",
+ "consultant": "Dr A. Example",
+ "admitted_at": "2026-11-03T09:00",
+ "discharged_at": "2026-11-06T14:00",
+ "reason_for_admission": "Community-acquired pneumonia",
+ "diagnoses": [
+  {
+   "text": "Community-acquired pneumonia",
+   "icd10": "J18.9"
+  },
+  {
+   "text": "Prediabetes",
+   "icd10": null
+  }
+ ],
+ "procedures": [
+  "Chest X-ray"
+ ],
+ "clinical_notes": [
+  "Presented with fever, productive cough and right basal crackles; chest X-ray showed right lower lobe consolidation.",
+  "Treated with oral amoxicillin and clarithromycin; CURB-65 score 1.",
+  "Afebrile for 48 hours with improving inflammatory markers; mobilising independently."
+ ],
+ "medication_changes": [
+  {
+   "drug": "Amoxicillin 500 MG",
+   "change": "started",
+   "reason": "community-acquired pneumonia, complete 5-day course"
+  },
+  {
+   "drug": "Paracetamol 500 MG",
+   "change": "started",
+   "reason": "symptomatic relief"
+  }
+ ],
+ "allergies": [
+  "No known drug allergies"
+ ],
+ "follow_up": null,
+ "pending_results": [
+  "Blood cultures (final report)"
+ ]
+}

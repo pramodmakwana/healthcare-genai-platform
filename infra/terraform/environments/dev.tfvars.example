@@ -1,0 +1,8 @@
+# Copy to dev.tfvars (git-ignored) and edit.
+environment           = "dev"
+region                = "eu-west-1"
+allowed_ingress_cidrs = ["203.0.113.10/32"] # your public IP: curl -s https://checkip.amazonaws.com
+alarm_email           = ""                  # e.g. "you@example.com"
+llm_provider          = "anthropic"         # or "bedrock" (set llm_model / llm_fast_model to Bedrock IDs)
+desired_count         = 1
+db_deletion_protection = false              # true for anything you care about

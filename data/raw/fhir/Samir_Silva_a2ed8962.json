@@ -1,0 +1,392 @@
+{
+ "resourceType": "Bundle",
+ "type": "collection",
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:a2ed8962-0a68-253a-0a6f-b154a8376dcd",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "a2ed8962-0a68-253a-0a6f-b154a8376dcd",
+    "identifier": [
+     {
+      "type": {
+       "text": "Medical Record Number"
+      },
+      "value": "MRN100023"
+     }
+    ],
+    "name": [
+     {
+      "use": "official",
+      "family": "Silva",
+      "given": [
+       "Samir"
+      ]
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1952-05-18",
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "+353 87 421 9380"
+     }
+    ],
+    "address": [
+     {
+      "line": [
+       "37 Linden Row"
+      ],
+      "city": "Dublin",
+      "country": "IE"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:ee3ab808-b898-a70c-c9d3-5f16afa6798a",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "ee3ab808-b898-a70c-c9d3-5f16afa6798a",
+    "status": "finished",
+    "class": {
+     "code": "AMB"
+    },
+    "type": [
+     {
+      "text": "General examination of patient (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:a2ed8962-0a68-253a-0a6f-b154a8376dcd",
+     "type": "Patient"
+    },
+    "period": {
+     "start": "2026-09-09"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9c461992-59d4-697f-d541-da5610c5ab83",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "9c461992-59d4-697f-d541-da5610c5ab83",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "44054006",
+       "display": "Type 2 diabetes mellitus"
+      },
+      {
+       "system": "http://hl7.org/fhir/sid/icd-10-cm",
+       "code": "E11.9",
+       "display": "Type 2 diabetes mellitus"
+      }
+     ],
+     "text": "Type 2 diabetes mellitus"
+    },
+    "subject": {
+     "reference": "urn:uuid:a2ed8962-0a68-253a-0a6f-b154a8376dcd",
+     "type": "Patient"
+    },
+    "onsetDateTime": "1997-04-09"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9d106a37-e583-76fb-52e7-1cf828a4fbd7",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "9d106a37-e583-76fb-52e7-1cf828a4fbd7",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "38341003",
+       "display": "Essential hypertension"
+      },
+      {
+       "system": "http://hl7.org/fhir/sid/icd-10-cm",
+       "code": "I10",
+       "display": "Essential hypertension"
+      }
+     ],
+     "text": "Essential hypertension"
+    },
+    "subject": {
+     "reference": "urn:uuid:a2ed8962-0a68-253a-0a6f-b154a8376dcd",
+     "type": "Patient"
+    },
+    "onsetDateTime": "1998-09-01"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:24c1276c-74d6-d11f-d0cc-e893e7b227e9",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "24c1276c-74d6-d11f-d0cc-e893e7b227e9",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "414916001",
+       "display": "Obesity"
+      },
+      {
+       "system": "http://hl7.org/fhir/sid/icd-10-cm",
+       "code": "E66.9",
+       "display": "Obesity"
+      }
+     ],
+     "text": "Obesity"
+    },
+    "subject": {
+     "reference": "urn:uuid:a2ed8962-0a68-253a-0a6f-b154a8376dcd",
+     "type": "Patient"
+    },
+    "onsetDateTime": "1999-09-09"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:eb7f1414-f6de-2fbe-8091-5aaf4110b8bc",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "eb7f1414-f6de-2fbe-8091-5aaf4110b8bc",
+    "status": "active",
+    "intent": "order",
+    "medicationCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+       "code": "860975",
+       "display": "Metformin 500 MG Extended Release Oral Tablet"
+      }
+     ],
+     "text": "Metformin 500 MG Extended Release Oral Tablet"
+    },
+    "subject": {
+     "reference": "urn:uuid:a2ed8962-0a68-253a-0a6f-b154a8376dcd",
+     "type": "Patient"
+    },
+    "authoredOn": "2025-04-06",
+    "dosageInstruction": [
+     {
+      "text": "Take 1 tablet twice daily with meals"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9da968f2-434b-4b94-9785-f4f83554ada8",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "9da968f2-434b-4b94-9785-f4f83554ada8",
+    "status": "active",
+    "intent": "order",
+    "medicationCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+       "code": "314076",
+       "display": "Lisinopril 10 MG Oral Tablet"
+      }
+     ],
+     "text": "Lisinopril 10 MG Oral Tablet"
+    },
+    "subject": {
+     "reference": "urn:uuid:a2ed8962-0a68-253a-0a6f-b154a8376dcd",
+     "type": "Patient"
+    },
+    "authoredOn": "2025-03-10",
+    "dosageInstruction": [
+     {
+      "text": "Take 1 tablet once daily"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:096de421-5f4c-e302-51af-10743cc63141",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "096de421-5f4c-e302-51af-10743cc63141",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "4548-4",
+       "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+     ],
+     "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:a2ed8962-0a68-253a-0a6f-b154a8376dcd",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-09-09",
+    "valueQuantity": {
+     "value": 7.4,
+     "unit": "%"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:29465388-6749-8314-2e9d-de7332eddf6f",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "29465388-6749-8314-2e9d-de7332eddf6f",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8480-6",
+       "display": "Systolic blood pressure"
+      }
+     ],
+     "text": "Systolic blood pressure"
+    },
+    "subject": {
+     "reference": "urn:uuid:a2ed8962-0a68-253a-0a6f-b154a8376dcd",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-09-09",
+    "valueQuantity": {
+     "value": 136,
+     "unit": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:adff8165-4737-fed1-efb8-2825a2f65e36",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "adff8165-4737-fed1-efb8-2825a2f65e36",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8462-4",
+       "display": "Diastolic blood pressure"
+      }
+     ],
+     "text": "Diastolic blood pressure"
+    },
+    "subject": {
+     "reference": "urn:uuid:a2ed8962-0a68-253a-0a6f-b154a8376dcd",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-09-09",
+    "valueQuantity": {
+     "value": 85,
+     "unit": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:2b32ada9-6078-a406-e539-cb1653ec4b93",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "2b32ada9-6078-a406-e539-cb1653ec4b93",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "18262-6",
+       "display": "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "urn:uuid:a2ed8962-0a68-253a-0a6f-b154a8376dcd",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-09-09",
+    "valueQuantity": {
+     "value": 82,
+     "unit": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:1d75cc23-43ab-d7ad-c8ed-3213cac8a61c",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "1d75cc23-43ab-d7ad-c8ed-3213cac8a61c",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "33914-3",
+       "display": "Glomerular filtration rate/1.73 sq M.predicted"
+      }
+     ],
+     "text": "Glomerular filtration rate/1.73 sq M.predicted"
+    },
+    "subject": {
+     "reference": "urn:uuid:a2ed8962-0a68-253a-0a6f-b154a8376dcd",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-09-09",
+    "valueQuantity": {
+     "value": 73,
+     "unit": "mL/min/{1.73_m2}"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:a2e5c7d7-0c6f-2fcc-87dd-58d9c4ad1006",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "a2e5c7d7-0c6f-2fcc-87dd-58d9c4ad1006",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "39156-5",
+       "display": "Body mass index (BMI) [Ratio]"
+      }
+     ],
+     "text": "Body mass index (BMI) [Ratio]"
+    },
+    "subject": {
+     "reference": "urn:uuid:a2ed8962-0a68-253a-0a6f-b154a8376dcd",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-09-09",
+    "valueQuantity": {
+     "value": 37.9,
+     "unit": "kg/m2"
+    }
+   }
+  }
+ ]
+}

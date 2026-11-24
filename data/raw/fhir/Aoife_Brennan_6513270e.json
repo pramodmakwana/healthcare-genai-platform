@@ -1,0 +1,266 @@
+{
+ "resourceType": "Bundle",
+ "type": "collection",
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:6513270e-269e-0d37-f2a7-4de452e6b438",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "6513270e-269e-0d37-f2a7-4de452e6b438",
+    "identifier": [
+     {
+      "type": {
+       "text": "Medical Record Number"
+      },
+      "value": "MRN100000"
+     }
+    ],
+    "name": [
+     {
+      "use": "official",
+      "family": "Brennan",
+      "given": [
+       "Aoife"
+      ]
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1951-07-02",
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "+353 87 196 6991"
+     }
+    ],
+    "address": [
+     {
+      "line": [
+       "71 Mill Lane"
+      ],
+      "city": "Dublin",
+      "country": "IE"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:1fb17c23-90c1-92cf-d3ac-94af0f21ddb6",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "1fb17c23-90c1-92cf-d3ac-94af0f21ddb6",
+    "status": "finished",
+    "class": {
+     "code": "AMB"
+    },
+    "type": [
+     {
+      "text": "General examination of patient (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:6513270e-269e-0d37-f2a7-4de452e6b438",
+     "type": "Patient"
+    },
+    "period": {
+     "start": "2026-02-16"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f29d0da9-953f-48f1-a09f-76b5a170b338",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f29d0da9-953f-48f1-a09f-76b5a170b338",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "714628002",
+       "display": "Prediabetes"
+      },
+      {
+       "system": "http://hl7.org/fhir/sid/icd-10-cm",
+       "code": "R73.03",
+       "display": "Prediabetes"
+      }
+     ],
+     "text": "Prediabetes"
+    },
+    "subject": {
+     "reference": "urn:uuid:6513270e-269e-0d37-f2a7-4de452e6b438",
+     "type": "Patient"
+    },
+    "onsetDateTime": "1996-06-27"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:658cda14-95e6-0af5-93bd-04cf0fd630f1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "658cda14-95e6-0af5-93bd-04cf0fd630f1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "4548-4",
+       "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+     ],
+     "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:6513270e-269e-0d37-f2a7-4de452e6b438",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-02-16",
+    "valueQuantity": {
+     "value": 6.1,
+     "unit": "%"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:0becd7b0-3898-d190-f9eb-dacc0cb1e29c",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "0becd7b0-3898-d190-f9eb-dacc0cb1e29c",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8480-6",
+       "display": "Systolic blood pressure"
+      }
+     ],
+     "text": "Systolic blood pressure"
+    },
+    "subject": {
+     "reference": "urn:uuid:6513270e-269e-0d37-f2a7-4de452e6b438",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-02-16",
+    "valueQuantity": {
+     "value": 109,
+     "unit": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:4a23d596-2217-bead-dbc4-96cb8e81973e",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "4a23d596-2217-bead-dbc4-96cb8e81973e",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8462-4",
+       "display": "Diastolic blood pressure"
+      }
+     ],
+     "text": "Diastolic blood pressure"
+    },
+    "subject": {
+     "reference": "urn:uuid:6513270e-269e-0d37-f2a7-4de452e6b438",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-02-16",
+    "valueQuantity": {
+     "value": 67,
+     "unit": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:1e27a1c0-8a6a-63ec-24ed-e6a46b4cb242",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "1e27a1c0-8a6a-63ec-24ed-e6a46b4cb242",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "18262-6",
+       "display": "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "urn:uuid:6513270e-269e-0d37-f2a7-4de452e6b438",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-02-16",
+    "valueQuantity": {
+     "value": 97,
+     "unit": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d0eda82f-8f6d-0558-4ef8-aa3892276658",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "d0eda82f-8f6d-0558-4ef8-aa3892276658",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "33914-3",
+       "display": "Glomerular filtration rate/1.73 sq M.predicted"
+      }
+     ],
+     "text": "Glomerular filtration rate/1.73 sq M.predicted"
+    },
+    "subject": {
+     "reference": "urn:uuid:6513270e-269e-0d37-f2a7-4de452e6b438",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-02-16",
+    "valueQuantity": {
+     "value": 91,
+     "unit": "mL/min/{1.73_m2}"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:94e3bf91-1a61-dbe2-2e44-158bae97ba94",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "94e3bf91-1a61-dbe2-2e44-158bae97ba94",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "39156-5",
+       "display": "Body mass index (BMI) [Ratio]"
+      }
+     ],
+     "text": "Body mass index (BMI) [Ratio]"
+    },
+    "subject": {
+     "reference": "urn:uuid:6513270e-269e-0d37-f2a7-4de452e6b438",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-02-16",
+    "valueQuantity": {
+     "value": 21.6,
+     "unit": "kg/m2"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "admission_id": "ADM2606",
+ "mrn": "MRN100006",
+ "ward": "Phoenix",
+ "consultant": "Dr B. Sample",
+ "admitted_at": "2026-11-08T08:00",
+ "discharged_at": "2026-11-10T13:00",
+ "reason_for_admission": "Hyperglycaemia with dehydration",
+ "diagnoses": [
+  {
+   "text": "Hyperglycaemia with dehydration",
+   "icd10": "E11.65"
+  },
+  {
+   "text": "Type 2 diabetes mellitus",
+   "icd10": null
+  },
+  {
+   "text": "Essential hypertension",
+   "icd10": "I10"
+  }
+ ],
+ "procedures": [],
+ "clinical_notes": [
+  "Presented with polyuria, polydipsia and capillary glucose of 24 mmol/L; no ketosis.",
+  "Treated with intravenous fluids and a variable-rate insulin infusion; glucose settled within 24 hours.",
+  "Diabetes team review: transitioned to basal insulin and diabetes education completed before discharge."
+ ],
+ "medication_changes": [
+  {
+   "drug": "Insulin glargine 100 UNT/ML",
+   "change": "started",
+   "reason": "persistent hyperglycaemia on oral therapy"
+  },
+  {
+   "drug": "Metformin 500 MG Extended Release",
+   "change": "dose_changed",
+   "reason": "reviewed and adjusted during admission"
+  }
+ ],
+ "allergies": [
+  "Penicillin (rash)"
+ ],
+ "follow_up": "GP review in 2 weeks; repeat bloods at GP.",
+ "pending_results": []
+}

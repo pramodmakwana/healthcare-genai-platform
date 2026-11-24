@@ -1,0 +1,295 @@
+{
+ "resourceType": "Bundle",
+ "type": "collection",
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:baa6b8e6-1f55-411e-eec4-e799c3406a1a",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "baa6b8e6-1f55-411e-eec4-e799c3406a1a",
+    "identifier": [
+     {
+      "type": {
+       "text": "Medical Record Number"
+      },
+      "value": "MRN100033"
+     }
+    ],
+    "name": [
+     {
+      "use": "official",
+      "family": "Rossi",
+      "given": [
+       "Farah"
+      ]
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1950-01-30",
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "+353 86 380 7256"
+     }
+    ],
+    "address": [
+     {
+      "line": [
+       "68 Linden Row"
+      ],
+      "city": "Dublin",
+      "country": "IE"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:6457abc6-f5fa-5d74-cd2e-4676fe85dfb1",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "6457abc6-f5fa-5d74-cd2e-4676fe85dfb1",
+    "status": "finished",
+    "class": {
+     "code": "AMB"
+    },
+    "type": [
+     {
+      "text": "General examination of patient (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:baa6b8e6-1f55-411e-eec4-e799c3406a1a",
+     "type": "Patient"
+    },
+    "period": {
+     "start": "2026-07-25"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:edee65ef-2119-c05c-2a1e-db8c36467838",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "edee65ef-2119-c05c-2a1e-db8c36467838",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "38341003",
+       "display": "Essential hypertension"
+      },
+      {
+       "system": "http://hl7.org/fhir/sid/icd-10-cm",
+       "code": "I10",
+       "display": "Essential hypertension"
+      }
+     ],
+     "text": "Essential hypertension"
+    },
+    "subject": {
+     "reference": "urn:uuid:baa6b8e6-1f55-411e-eec4-e799c3406a1a",
+     "type": "Patient"
+    },
+    "onsetDateTime": "2005-10-14"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:cc63858a-cf40-2339-11a3-199dc6cfbfe5",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "cc63858a-cf40-2339-11a3-199dc6cfbfe5",
+    "status": "active",
+    "intent": "order",
+    "medicationCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+       "code": "197361",
+       "display": "Amlodipine 5 MG Oral Tablet"
+      }
+     ],
+     "text": "Amlodipine 5 MG Oral Tablet"
+    },
+    "subject": {
+     "reference": "urn:uuid:baa6b8e6-1f55-411e-eec4-e799c3406a1a",
+     "type": "Patient"
+    },
+    "authoredOn": "2024-09-14",
+    "dosageInstruction": [
+     {
+      "text": "Take 1 tablet once daily"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:8fe2c3f4-a467-2c0c-781a-c78f3173b8d9",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "8fe2c3f4-a467-2c0c-781a-c78f3173b8d9",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "4548-4",
+       "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+     ],
+     "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:baa6b8e6-1f55-411e-eec4-e799c3406a1a",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-07-25",
+    "valueQuantity": {
+     "value": 5.5,
+     "unit": "%"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f6bfce1a-d08c-33c8-39da-457ab8801b29",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "f6bfce1a-d08c-33c8-39da-457ab8801b29",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8480-6",
+       "display": "Systolic blood pressure"
+      }
+     ],
+     "text": "Systolic blood pressure"
+    },
+    "subject": {
+     "reference": "urn:uuid:baa6b8e6-1f55-411e-eec4-e799c3406a1a",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-07-25",
+    "valueQuantity": {
+     "value": 154,
+     "unit": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:a3882a8a-aa81-73cf-5a66-d71a257185b5",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "a3882a8a-aa81-73cf-5a66-d71a257185b5",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8462-4",
+       "display": "Diastolic blood pressure"
+      }
+     ],
+     "text": "Diastolic blood pressure"
+    },
+    "subject": {
+     "reference": "urn:uuid:baa6b8e6-1f55-411e-eec4-e799c3406a1a",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-07-25",
+    "valueQuantity": {
+     "value": 90,
+     "unit": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d0f11e05-cb95-f372-d198-e3b8d4a8b1a7",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "d0f11e05-cb95-f372-d198-e3b8d4a8b1a7",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "18262-6",
+       "display": "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "urn:uuid:baa6b8e6-1f55-411e-eec4-e799c3406a1a",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-07-25",
+    "valueQuantity": {
+     "value": 76,
+     "unit": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:4b5a04b0-ff02-f2b1-77d5-759d69cd2483",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "4b5a04b0-ff02-f2b1-77d5-759d69cd2483",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "33914-3",
+       "display": "Glomerular filtration rate/1.73 sq M.predicted"
+      }
+     ],
+     "text": "Glomerular filtration rate/1.73 sq M.predicted"
+    },
+    "subject": {
+     "reference": "urn:uuid:baa6b8e6-1f55-411e-eec4-e799c3406a1a",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-07-25",
+    "valueQuantity": {
+     "value": 79,
+     "unit": "mL/min/{1.73_m2}"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:200ae258-a64c-add5-8c5b-45dfc28803f8",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "200ae258-a64c-add5-8c5b-45dfc28803f8",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "39156-5",
+       "display": "Body mass index (BMI) [Ratio]"
+      }
+     ],
+     "text": "Body mass index (BMI) [Ratio]"
+    },
+    "subject": {
+     "reference": "urn:uuid:baa6b8e6-1f55-411e-eec4-e799c3406a1a",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-07-25",
+    "valueQuantity": {
+     "value": 23.6,
+     "unit": "kg/m2"
+    }
+   }
+  }
+ ]
+}

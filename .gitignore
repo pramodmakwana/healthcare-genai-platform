@@ -1,0 +1,16 @@
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+.index/
+.chroma/
+reports/eval_details.jsonl
+infra/terraform/.terraform/
+infra/terraform/.terraform.lock.hcl
+infra/terraform/*.tfstate*
+infra/terraform/backend.hcl
+infra/terraform/environments/*.tfvars
+!infra/terraform/environments/*.tfvars.example

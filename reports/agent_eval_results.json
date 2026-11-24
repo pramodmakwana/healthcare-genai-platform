@@ -1,0 +1,25 @@
+{
+  "prior_auth": {
+    "cases": 38,
+    "status_accuracy": 1.0,
+    "missing_items_exact_match": 1.0,
+    "avg_checks_automated_per_request": 2.89,
+    "latency_p50_ms": 8.2,
+    "failures": []
+  },
+  "discharge": {
+    "admissions": 12,
+    "issue_recall": 1.0,
+    "issue_precision": 1.0,
+    "auto_fix_rate": 1.0,
+    "send_by_deadline_accuracy": 1.0,
+    "complete_after_signoff": 1.0,
+    "by_type": {
+      "caught:diagnosis_missing_icd10": 5,
+      "caught:med_change_without_reason": 3,
+      "caught:missing_allergy_status": 2,
+      "caught:missing_follow_up": 5
+    },
+    "failures": []
+  }
+}

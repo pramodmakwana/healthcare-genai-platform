@@ -1,0 +1,46 @@
+{
+ "admission_id": "ADM2611",
+ "mrn": "MRN100011",
+ "ward": "Phoenix",
+ "consultant": "Dr B. Sample",
+ "admitted_at": "2026-11-13T13:00",
+ "discharged_at": "2026-11-17T18:00",
+ "reason_for_admission": "Hypertensive urgency",
+ "diagnoses": [
+  {
+   "text": "Hypertensive urgency",
+   "icd10": "I16.0"
+  },
+  {
+   "text": "Type 2 diabetes mellitus",
+   "icd10": null
+  },
+  {
+   "text": "Essential hypertension",
+   "icd10": "I10"
+  }
+ ],
+ "procedures": [],
+ "clinical_notes": [
+  "Presented with blood pressure 196/112 mmHg and headache; no evidence of end-organ damage on ECG, bloods or fundoscopy.",
+  "Treated with oral amlodipine; blood pressure reduced gradually over 24 hours.",
+  "Blood pressure 148/88 mmHg at discharge; adherence counselling given."
+ ],
+ "medication_changes": [
+  {
+   "drug": "Amlodipine 5 MG",
+   "change": "started",
+   "reason": null
+  },
+  {
+   "drug": "Metformin 500 MG Extended Release",
+   "change": "dose_changed",
+   "reason": "reviewed and adjusted during admission"
+  }
+ ],
+ "allergies": [
+  "Penicillin (rash)"
+ ],
+ "follow_up": "GP review in 2 weeks; repeat bloods at GP.",
+ "pending_results": []
+}

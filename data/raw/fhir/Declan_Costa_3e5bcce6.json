@@ -1,0 +1,295 @@
+{
+ "resourceType": "Bundle",
+ "type": "collection",
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:3e5bcce6-cd2f-4934-efc4-6c08039cd862",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "3e5bcce6-cd2f-4934-efc4-6c08039cd862",
+    "identifier": [
+     {
+      "type": {
+       "text": "Medical Record Number"
+      },
+      "value": "MRN100025"
+     }
+    ],
+    "name": [
+     {
+      "use": "official",
+      "family": "Costa",
+      "given": [
+       "Declan"
+      ]
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1985-06-13",
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "+353 85 165 3370"
+     }
+    ],
+    "address": [
+     {
+      "line": [
+       "115 Harbour View"
+      ],
+      "city": "Dublin",
+      "country": "IE"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7199e0b3-9416-c610-a546-4f6d983fd973",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "7199e0b3-9416-c610-a546-4f6d983fd973",
+    "status": "finished",
+    "class": {
+     "code": "AMB"
+    },
+    "type": [
+     {
+      "text": "General examination of patient (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:3e5bcce6-cd2f-4934-efc4-6c08039cd862",
+     "type": "Patient"
+    },
+    "period": {
+     "start": "2026-10-15"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:2a43f047-3f9d-8024-7e2b-86d1bbc81f54",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "2a43f047-3f9d-8024-7e2b-86d1bbc81f54",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "195967001",
+       "display": "Asthma"
+      },
+      {
+       "system": "http://hl7.org/fhir/sid/icd-10-cm",
+       "code": "J45.909",
+       "display": "Asthma"
+      }
+     ],
+     "text": "Asthma"
+    },
+    "subject": {
+     "reference": "urn:uuid:3e5bcce6-cd2f-4934-efc4-6c08039cd862",
+     "type": "Patient"
+    },
+    "onsetDateTime": "2026-03-29"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:0fc05531-0b43-b6dd-001a-2fd3e74c00f4",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "0fc05531-0b43-b6dd-001a-2fd3e74c00f4",
+    "status": "active",
+    "intent": "order",
+    "medicationCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+       "code": "245314",
+       "display": "Salbutamol 100 MCG/ACTUAT Metered Dose Inhaler"
+      }
+     ],
+     "text": "Salbutamol 100 MCG/ACTUAT Metered Dose Inhaler"
+    },
+    "subject": {
+     "reference": "urn:uuid:3e5bcce6-cd2f-4934-efc4-6c08039cd862",
+     "type": "Patient"
+    },
+    "authoredOn": "2025-03-20",
+    "dosageInstruction": [
+     {
+      "text": "Inhale 2 puffs as needed for wheeze"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:3cd7dcef-2f87-466e-67ee-e0990675295f",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "3cd7dcef-2f87-466e-67ee-e0990675295f",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "4548-4",
+       "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+     ],
+     "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:3e5bcce6-cd2f-4934-efc4-6c08039cd862",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-10-15",
+    "valueQuantity": {
+     "value": 5.4,
+     "unit": "%"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:c7642bde-e967-ebdb-0ef1-f01228c26bb2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "c7642bde-e967-ebdb-0ef1-f01228c26bb2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8480-6",
+       "display": "Systolic blood pressure"
+      }
+     ],
+     "text": "Systolic blood pressure"
+    },
+    "subject": {
+     "reference": "urn:uuid:3e5bcce6-cd2f-4934-efc4-6c08039cd862",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-10-15",
+    "valueQuantity": {
+     "value": 120,
+     "unit": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:8d094979-9cd5-f2bb-0329-602a1adbe533",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "8d094979-9cd5-f2bb-0329-602a1adbe533",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8462-4",
+       "display": "Diastolic blood pressure"
+      }
+     ],
+     "text": "Diastolic blood pressure"
+    },
+    "subject": {
+     "reference": "urn:uuid:3e5bcce6-cd2f-4934-efc4-6c08039cd862",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-10-15",
+    "valueQuantity": {
+     "value": 78,
+     "unit": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:246b9480-327f-82f8-f0e0-2c42a82409f1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "246b9480-327f-82f8-f0e0-2c42a82409f1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "18262-6",
+       "display": "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "urn:uuid:3e5bcce6-cd2f-4934-efc4-6c08039cd862",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-10-15",
+    "valueQuantity": {
+     "value": 86,
+     "unit": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9bab5340-84ac-8fe6-3313-a10169c60d1b",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "9bab5340-84ac-8fe6-3313-a10169c60d1b",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "33914-3",
+       "display": "Glomerular filtration rate/1.73 sq M.predicted"
+      }
+     ],
+     "text": "Glomerular filtration rate/1.73 sq M.predicted"
+    },
+    "subject": {
+     "reference": "urn:uuid:3e5bcce6-cd2f-4934-efc4-6c08039cd862",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-10-15",
+    "valueQuantity": {
+     "value": 65,
+     "unit": "mL/min/{1.73_m2}"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:a43dede7-a5c8-e5c5-81c7-5baba48792c5",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "a43dede7-a5c8-e5c5-81c7-5baba48792c5",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "39156-5",
+       "display": "Body mass index (BMI) [Ratio]"
+      }
+     ],
+     "text": "Body mass index (BMI) [Ratio]"
+    },
+    "subject": {
+     "reference": "urn:uuid:3e5bcce6-cd2f-4934-efc4-6c08039cd862",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-10-15",
+    "valueQuantity": {
+     "value": 21.5,
+     "unit": "kg/m2"
+    }
+   }
+  }
+ ]
+}

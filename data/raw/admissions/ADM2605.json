@@ -1,0 +1,44 @@
+{
+ "admission_id": "ADM2605",
+ "mrn": "MRN100005",
+ "ward": "St Brigid's",
+ "consultant": "Dr C. Placeholder",
+ "admitted_at": "2026-11-07T13:00",
+ "discharged_at": "2026-11-11T18:00",
+ "reason_for_admission": "Hypertensive urgency",
+ "diagnoses": [
+  {
+   "text": "Hypertensive urgency",
+   "icd10": "I16.0"
+  },
+  {
+   "text": "Type 2 diabetes mellitus",
+   "icd10": "E11.9"
+  },
+  {
+   "text": "Essential hypertension",
+   "icd10": "I10"
+  }
+ ],
+ "procedures": [],
+ "clinical_notes": [
+  "Presented with blood pressure 196/112 mmHg and headache; no evidence of end-organ damage on ECG, bloods or fundoscopy.",
+  "Treated with oral amlodipine; blood pressure reduced gradually over 24 hours.",
+  "Blood pressure 148/88 mmHg at discharge; adherence counselling given."
+ ],
+ "medication_changes": [
+  {
+   "drug": "Amlodipine 5 MG",
+   "change": "started",
+   "reason": "blood pressure control"
+  },
+  {
+   "drug": "Metformin 500 MG Extended Release",
+   "change": "dose_changed",
+   "reason": "reviewed and adjusted during admission"
+  }
+ ],
+ "allergies": null,
+ "follow_up": null,
+ "pending_results": []
+}

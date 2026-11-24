@@ -1,0 +1,300 @@
+{
+ "resourceType": "Bundle",
+ "type": "collection",
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:7b951593-6c6f-ba96-d974-fec54003ff33",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "7b951593-6c6f-ba96-d974-fec54003ff33",
+    "identifier": [
+     {
+      "type": {
+       "text": "Medical Record Number"
+      },
+      "value": "MRN100032"
+     }
+    ],
+    "name": [
+     {
+      "use": "official",
+      "family": "Quinn",
+      "given": [
+       "Aisling"
+      ]
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1946-10-07",
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "+353 87 979 7706"
+     }
+    ],
+    "address": [
+     {
+      "line": [
+       "107 Mill Lane"
+      ],
+      "city": "Dublin",
+      "country": "IE"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:09c3e7c0-1b3b-b890-f980-aae3e87f44b1",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "09c3e7c0-1b3b-b890-f980-aae3e87f44b1",
+    "status": "finished",
+    "class": {
+     "code": "AMB"
+    },
+    "type": [
+     {
+      "text": "General examination of patient (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:7b951593-6c6f-ba96-d974-fec54003ff33",
+     "type": "Patient"
+    },
+    "period": {
+     "start": "2026-07-19"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:b759efcf-292c-fb34-37c7-14cf8b19a2b6",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "b759efcf-292c-fb34-37c7-14cf8b19a2b6",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "714628002",
+       "display": "Prediabetes"
+      },
+      {
+       "system": "http://hl7.org/fhir/sid/icd-10-cm",
+       "code": "R73.03",
+       "display": "Prediabetes"
+      }
+     ],
+     "text": "Prediabetes"
+    },
+    "subject": {
+     "reference": "urn:uuid:7b951593-6c6f-ba96-d974-fec54003ff33",
+     "type": "Patient"
+    },
+    "onsetDateTime": "1993-01-04"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d8df71f4-19e0-d64a-5924-204384eb99bd",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "d8df71f4-19e0-d64a-5924-204384eb99bd",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "414916001",
+       "display": "Obesity"
+      },
+      {
+       "system": "http://hl7.org/fhir/sid/icd-10-cm",
+       "code": "E66.9",
+       "display": "Obesity"
+      }
+     ],
+     "text": "Obesity"
+    },
+    "subject": {
+     "reference": "urn:uuid:7b951593-6c6f-ba96-d974-fec54003ff33",
+     "type": "Patient"
+    },
+    "onsetDateTime": "1990-09-14"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:3479b1f0-8a81-4a78-74ef-d76493166586",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "3479b1f0-8a81-4a78-74ef-d76493166586",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "4548-4",
+       "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+     ],
+     "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:7b951593-6c6f-ba96-d974-fec54003ff33",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-07-19",
+    "valueQuantity": {
+     "value": 6.4,
+     "unit": "%"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:041f8d71-831e-f5c3-79c9-cdb6b7a0b785",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "041f8d71-831e-f5c3-79c9-cdb6b7a0b785",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8480-6",
+       "display": "Systolic blood pressure"
+      }
+     ],
+     "text": "Systolic blood pressure"
+    },
+    "subject": {
+     "reference": "urn:uuid:7b951593-6c6f-ba96-d974-fec54003ff33",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-07-19",
+    "valueQuantity": {
+     "value": 113,
+     "unit": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:5eb2ad7e-d438-61ce-cae5-a871a3a6a0a9",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "5eb2ad7e-d438-61ce-cae5-a871a3a6a0a9",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8462-4",
+       "display": "Diastolic blood pressure"
+      }
+     ],
+     "text": "Diastolic blood pressure"
+    },
+    "subject": {
+     "reference": "urn:uuid:7b951593-6c6f-ba96-d974-fec54003ff33",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-07-19",
+    "valueQuantity": {
+     "value": 80,
+     "unit": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:bdfaea88-690c-9bf8-57c5-2302858d5cd2",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "bdfaea88-690c-9bf8-57c5-2302858d5cd2",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "18262-6",
+       "display": "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "urn:uuid:7b951593-6c6f-ba96-d974-fec54003ff33",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-07-19",
+    "valueQuantity": {
+     "value": 111,
+     "unit": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:fd82db76-35c8-6b78-74f8-06f2f2ae556f",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "fd82db76-35c8-6b78-74f8-06f2f2ae556f",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "33914-3",
+       "display": "Glomerular filtration rate/1.73 sq M.predicted"
+      }
+     ],
+     "text": "Glomerular filtration rate/1.73 sq M.predicted"
+    },
+    "subject": {
+     "reference": "urn:uuid:7b951593-6c6f-ba96-d974-fec54003ff33",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-07-19",
+    "valueQuantity": {
+     "value": 85,
+     "unit": "mL/min/{1.73_m2}"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:8387e0e4-647a-6c08-2f0d-b088af323c2d",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "8387e0e4-647a-6c08-2f0d-b088af323c2d",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "39156-5",
+       "display": "Body mass index (BMI) [Ratio]"
+      }
+     ],
+     "text": "Body mass index (BMI) [Ratio]"
+    },
+    "subject": {
+     "reference": "urn:uuid:7b951593-6c6f-ba96-d974-fec54003ff33",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-07-19",
+    "valueQuantity": {
+     "value": 36.3,
+     "unit": "kg/m2"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+# Deploy to AWS after CI passes on main. Uses GitHub OIDC -> short-lived AWS credentials
+# (no AWS keys stored in GitHub). Order matters:
+#   build+push image -> register task definition -> run ingestion task -> roll out service -> smoke test
+# The ECS deployment circuit breaker rolls back automatically if new tasks fail health checks.
+#
+# One-time setup (see docs/RUNBOOK.md): GitHub environment "dev" with variables
+#   AWS_REGION, AWS_DEPLOY_ROLE_ARN, ECR_REPOSITORY_URL, ECS_CLUSTER, ECS_SERVICE,
+#   TASK_DEFINITION_FAMILY, APP_SUBNET_IDS (comma-separated), APP_SECURITY_GROUP_ID, API_URL
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-dev
+  cancel-in-progress: false
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    environment: dev
+    env:
+      IMAGE: ${{ vars.ECR_REPOSITORY_URL }}:${{ github.event.workflow_run.head_sha || github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build and push image (tag = git SHA, immutable)
+        run: |
+          docker build -t "$IMAGE" .
+          docker push "$IMAGE"
+
+      - name: Register task definition with the new image
+        id: taskdef
+        run: |
+          aws ecs describe-task-definition --task-definition "${{ vars.TASK_DEFINITION_FAMILY }}" \
+            --query taskDefinition > current.json
+          jq --arg img "$IMAGE" '.containerDefinitions[0].image = $img
+            | del(.taskDefinitionArn, .revision, .status, .requiresAttributes, .compatibilities, .registeredAt, .registeredBy)' \
+            current.json > new.json
+          arn=$(aws ecs register-task-definition --cli-input-json file://new.json --query taskDefinition.taskDefinitionArn --output text)
+          echo "arn=$arn" >> "$GITHUB_OUTPUT"
+
+      - name: Refresh RAG index (one-off ingestion task, same image)
+        run: |
+          subnets=$(echo '${{ vars.APP_SUBNET_IDS }}' | jq -R 'split(",")')
+          task=$(aws ecs run-task --cluster "${{ vars.ECS_CLUSTER }}" --launch-type FARGATE \
+            --task-definition "${{ steps.taskdef.outputs.arn }}" \
+            --network-configuration "{\"awsvpcConfiguration\":{\"subnets\":$subnets,\"securityGroups\":[\"${{ vars.APP_SECURITY_GROUP_ID }}\"],\"assignPublicIp\":\"ENABLED\"}}" \
+            --overrides '{"containerOverrides":[{"name":"api","command":["python","-m","hcai.ingestion.pipeline"]}]}' \
+            --query 'tasks[0].taskArn' --output text)
+          echo "Ingestion task: $task"
+          aws ecs wait tasks-stopped --cluster "${{ vars.ECS_CLUSTER }}" --tasks "$task"
+          code=$(aws ecs describe-tasks --cluster "${{ vars.ECS_CLUSTER }}" --tasks "$task" \
+            --query 'tasks[0].containers[0].exitCode' --output text)
+          echo "Ingestion exit code: $code"
+          test "$code" = "0"
+
+      - name: Roll out service
+        run: |
+          aws ecs update-service --cluster "${{ vars.ECS_CLUSTER }}" --service "${{ vars.ECS_SERVICE }}" \
+            --task-definition "${{ steps.taskdef.outputs.arn }}" > /dev/null
+          aws ecs wait services-stable --cluster "${{ vars.ECS_CLUSTER }}" --services "${{ vars.ECS_SERVICE }}"
+
+      - name: Smoke test
+        run: |
+          rid="deploy-${GITHUB_RUN_ID}"
+          curl -sf "${{ vars.API_URL }}/health"
+          curl -sf -X POST "${{ vars.API_URL }}/ask" -H 'Content-Type: application/json' -H "X-Request-ID: $rid" \
+            -d '{"question":"At what eGFR should metformin be stopped?"}' | tee answer.json
+          jq -e '.citations | length > 0' answer.json
+          echo "Trace this request in CloudWatch Logs Insights with request_id = $rid"

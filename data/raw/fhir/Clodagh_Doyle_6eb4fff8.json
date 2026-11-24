@@ -1,0 +1,421 @@
+{
+ "resourceType": "Bundle",
+ "type": "collection",
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:6eb4fff8-cdce-c408-d26f-1d764f06e95a",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "6eb4fff8-cdce-c408-d26f-1d764f06e95a",
+    "identifier": [
+     {
+      "type": {
+       "text": "Medical Record Number"
+      },
+      "value": "MRN100018"
+     }
+    ],
+    "name": [
+     {
+      "use": "official",
+      "family": "Doyle",
+      "given": [
+       "Clodagh"
+      ]
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1949-06-03",
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "+353 87 584 4206"
+     }
+    ],
+    "address": [
+     {
+      "line": [
+       "104 Rathmore Park"
+      ],
+      "city": "Dublin",
+      "country": "IE"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:602533dc-0a68-013d-679f-2d9ec4445aae",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "602533dc-0a68-013d-679f-2d9ec4445aae",
+    "status": "finished",
+    "class": {
+     "code": "AMB"
+    },
+    "type": [
+     {
+      "text": "General examination of patient (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:6eb4fff8-cdce-c408-d26f-1d764f06e95a",
+     "type": "Patient"
+    },
+    "period": {
+     "start": "2026-05-07"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:eb8a25fc-cda7-9077-1005-3d2c76cc0573",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "eb8a25fc-cda7-9077-1005-3d2c76cc0573",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "44054006",
+       "display": "Type 2 diabetes mellitus"
+      },
+      {
+       "system": "http://hl7.org/fhir/sid/icd-10-cm",
+       "code": "E11.9",
+       "display": "Type 2 diabetes mellitus"
+      }
+     ],
+     "text": "Type 2 diabetes mellitus"
+    },
+    "subject": {
+     "reference": "urn:uuid:6eb4fff8-cdce-c408-d26f-1d764f06e95a",
+     "type": "Patient"
+    },
+    "onsetDateTime": "1985-12-17"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:10170d2b-bf4e-302c-31e7-aed141cbcc3a",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "10170d2b-bf4e-302c-31e7-aed141cbcc3a",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "38341003",
+       "display": "Essential hypertension"
+      },
+      {
+       "system": "http://hl7.org/fhir/sid/icd-10-cm",
+       "code": "I10",
+       "display": "Essential hypertension"
+      }
+     ],
+     "text": "Essential hypertension"
+    },
+    "subject": {
+     "reference": "urn:uuid:6eb4fff8-cdce-c408-d26f-1d764f06e95a",
+     "type": "Patient"
+    },
+    "onsetDateTime": "1987-03-06"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f52b2549-55c0-a74d-45b6-69f75cebe213",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "f52b2549-55c0-a74d-45b6-69f75cebe213",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "433144002",
+       "display": "Chronic kidney disease stage 3"
+      },
+      {
+       "system": "http://hl7.org/fhir/sid/icd-10-cm",
+       "code": "N18.3",
+       "display": "Chronic kidney disease stage 3"
+      }
+     ],
+     "text": "Chronic kidney disease stage 3"
+    },
+    "subject": {
+     "reference": "urn:uuid:6eb4fff8-cdce-c408-d26f-1d764f06e95a",
+     "type": "Patient"
+    },
+    "onsetDateTime": "1999-08-10"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:431dbc3f-0b28-6c70-9df2-4d5ef429c622",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "431dbc3f-0b28-6c70-9df2-4d5ef429c622",
+    "status": "active",
+    "intent": "order",
+    "medicationCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+       "code": "860975",
+       "display": "Metformin 500 MG Extended Release Oral Tablet"
+      }
+     ],
+     "text": "Metformin 500 MG Extended Release Oral Tablet"
+    },
+    "subject": {
+     "reference": "urn:uuid:6eb4fff8-cdce-c408-d26f-1d764f06e95a",
+     "type": "Patient"
+    },
+    "authoredOn": "2025-05-18",
+    "dosageInstruction": [
+     {
+      "text": "Take 1 tablet twice daily with meals"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:00f72d3c-4c22-cab7-468f-b596ec9a360c",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "00f72d3c-4c22-cab7-468f-b596ec9a360c",
+    "status": "active",
+    "intent": "order",
+    "medicationCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+       "code": "1545658",
+       "display": "Empagliflozin 10 MG Oral Tablet"
+      }
+     ],
+     "text": "Empagliflozin 10 MG Oral Tablet"
+    },
+    "subject": {
+     "reference": "urn:uuid:6eb4fff8-cdce-c408-d26f-1d764f06e95a",
+     "type": "Patient"
+    },
+    "authoredOn": "2024-08-06",
+    "dosageInstruction": [
+     {
+      "text": "Take 1 tablet once daily in the morning"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:f24d04fd-a24c-8407-ce3f-a028ea9d18b2",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "f24d04fd-a24c-8407-ce3f-a028ea9d18b2",
+    "status": "active",
+    "intent": "order",
+    "medicationCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+       "code": "314076",
+       "display": "Lisinopril 10 MG Oral Tablet"
+      }
+     ],
+     "text": "Lisinopril 10 MG Oral Tablet"
+    },
+    "subject": {
+     "reference": "urn:uuid:6eb4fff8-cdce-c408-d26f-1d764f06e95a",
+     "type": "Patient"
+    },
+    "authoredOn": "2026-01-31",
+    "dosageInstruction": [
+     {
+      "text": "Take 1 tablet once daily"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:1b757b20-3bde-a8c3-d375-eff10635afef",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "1b757b20-3bde-a8c3-d375-eff10635afef",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "4548-4",
+       "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+     ],
+     "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:6eb4fff8-cdce-c408-d26f-1d764f06e95a",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-05-07",
+    "valueQuantity": {
+     "value": 8.4,
+     "unit": "%"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:773afe02-f4ef-6142-b72f-ac4a79a5fd62",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "773afe02-f4ef-6142-b72f-ac4a79a5fd62",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8480-6",
+       "display": "Systolic blood pressure"
+      }
+     ],
+     "text": "Systolic blood pressure"
+    },
+    "subject": {
+     "reference": "urn:uuid:6eb4fff8-cdce-c408-d26f-1d764f06e95a",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-05-07",
+    "valueQuantity": {
+     "value": 152,
+     "unit": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:ca304218-62f2-a21b-c6bf-4fa2f4337bd1",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "ca304218-62f2-a21b-c6bf-4fa2f4337bd1",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8462-4",
+       "display": "Diastolic blood pressure"
+      }
+     ],
+     "text": "Diastolic blood pressure"
+    },
+    "subject": {
+     "reference": "urn:uuid:6eb4fff8-cdce-c408-d26f-1d764f06e95a",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-05-07",
+    "valueQuantity": {
+     "value": 93,
+     "unit": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:d096bfd6-6e10-6c0e-e9de-047940449aa0",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "d096bfd6-6e10-6c0e-e9de-047940449aa0",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "18262-6",
+       "display": "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "urn:uuid:6eb4fff8-cdce-c408-d26f-1d764f06e95a",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-05-07",
+    "valueQuantity": {
+     "value": 100,
+     "unit": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7f1d490e-ed97-ec76-21f9-1a997e544d56",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "7f1d490e-ed97-ec76-21f9-1a997e544d56",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "33914-3",
+       "display": "Glomerular filtration rate/1.73 sq M.predicted"
+      }
+     ],
+     "text": "Glomerular filtration rate/1.73 sq M.predicted"
+    },
+    "subject": {
+     "reference": "urn:uuid:6eb4fff8-cdce-c408-d26f-1d764f06e95a",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-05-07",
+    "valueQuantity": {
+     "value": 32,
+     "unit": "mL/min/{1.73_m2}"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:ee59b397-cd75-1e08-023a-80a22ed51b12",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "ee59b397-cd75-1e08-023a-80a22ed51b12",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "39156-5",
+       "display": "Body mass index (BMI) [Ratio]"
+      }
+     ],
+     "text": "Body mass index (BMI) [Ratio]"
+    },
+    "subject": {
+     "reference": "urn:uuid:6eb4fff8-cdce-c408-d26f-1d764f06e95a",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-05-07",
+    "valueQuantity": {
+     "value": 26.4,
+     "unit": "kg/m2"
+    }
+   }
+  }
+ ]
+}

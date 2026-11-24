@@ -1,0 +1,42 @@
+{
+ "admission_id": "ADM2600",
+ "mrn": "MRN100000",
+ "ward": "Phoenix",
+ "consultant": "Dr C. Placeholder",
+ "admitted_at": "2026-11-02T08:00",
+ "discharged_at": "2026-11-04T13:00",
+ "reason_for_admission": "Hyperglycaemia with dehydration",
+ "diagnoses": [
+  {
+   "text": "Hyperglycaemia with dehydration",
+   "icd10": "E11.65"
+  },
+  {
+   "text": "Prediabetes",
+   "icd10": "R73.03"
+  }
+ ],
+ "procedures": [],
+ "clinical_notes": [
+  "Presented with polyuria, polydipsia and capillary glucose of 24 mmol/L; no ketosis.",
+  "Treated with intravenous fluids and a variable-rate insulin infusion; glucose settled within 24 hours.",
+  "Diabetes team review: transitioned to basal insulin and diabetes education completed before discharge."
+ ],
+ "medication_changes": [
+  {
+   "drug": "Insulin glargine 100 UNT/ML",
+   "change": "started",
+   "reason": "persistent hyperglycaemia on oral therapy"
+  },
+  {
+   "drug": "Paracetamol 500 MG",
+   "change": "started",
+   "reason": "symptomatic relief"
+  }
+ ],
+ "allergies": [
+  "No known drug allergies"
+ ],
+ "follow_up": "GP review in 2 weeks; repeat bloods at GP.",
+ "pending_results": []
+}

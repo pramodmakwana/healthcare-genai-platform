@@ -1,0 +1,358 @@
+{
+ "resourceType": "Bundle",
+ "type": "collection",
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:207c9f6c-a012-35b8-6a64-3531b7daea11",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "207c9f6c-a012-35b8-6a64-3531b7daea11",
+    "identifier": [
+     {
+      "type": {
+       "text": "Medical Record Number"
+      },
+      "value": "MRN100036"
+     }
+    ],
+    "name": [
+     {
+      "use": "official",
+      "family": "Lynch",
+      "given": [
+       "Padraig"
+      ]
+     }
+    ],
+    "gender": "female",
+    "birthDate": "1953-06-23",
+    "telecom": [
+     {
+      "system": "phone",
+      "value": "+353 87 474 6592"
+     }
+    ],
+    "address": [
+     {
+      "line": [
+       "106 Harbour View"
+      ],
+      "city": "Dublin",
+      "country": "IE"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:7e651ba5-d3e6-6159-5aec-fabb4afa5e69",
+   "resource": {
+    "resourceType": "Encounter",
+    "id": "7e651ba5-d3e6-6159-5aec-fabb4afa5e69",
+    "status": "finished",
+    "class": {
+     "code": "AMB"
+    },
+    "type": [
+     {
+      "text": "General examination of patient (procedure)"
+     }
+    ],
+    "subject": {
+     "reference": "urn:uuid:207c9f6c-a012-35b8-6a64-3531b7daea11",
+     "type": "Patient"
+    },
+    "period": {
+     "start": "2026-01-27"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:458dff2d-fbfa-3797-80f5-b4a3556ecb72",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "458dff2d-fbfa-3797-80f5-b4a3556ecb72",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "38341003",
+       "display": "Essential hypertension"
+      },
+      {
+       "system": "http://hl7.org/fhir/sid/icd-10-cm",
+       "code": "I10",
+       "display": "Essential hypertension"
+      }
+     ],
+     "text": "Essential hypertension"
+    },
+    "subject": {
+     "reference": "urn:uuid:207c9f6c-a012-35b8-6a64-3531b7daea11",
+     "type": "Patient"
+    },
+    "onsetDateTime": "2006-07-24"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:a7913051-341a-a3ee-f999-4f1858457b3a",
+   "resource": {
+    "resourceType": "Condition",
+    "id": "a7913051-341a-a3ee-f999-4f1858457b3a",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "55822004",
+       "display": "Hyperlipidemia"
+      },
+      {
+       "system": "http://hl7.org/fhir/sid/icd-10-cm",
+       "code": "E78.5",
+       "display": "Hyperlipidemia"
+      }
+     ],
+     "text": "Hyperlipidemia"
+    },
+    "subject": {
+     "reference": "urn:uuid:207c9f6c-a012-35b8-6a64-3531b7daea11",
+     "type": "Patient"
+    },
+    "onsetDateTime": "2011-03-03"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:54b59e2d-1e30-8b51-cabd-4f537e005bd9",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "54b59e2d-1e30-8b51-cabd-4f537e005bd9",
+    "status": "active",
+    "intent": "order",
+    "medicationCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+       "code": "314076",
+       "display": "Lisinopril 10 MG Oral Tablet"
+      }
+     ],
+     "text": "Lisinopril 10 MG Oral Tablet"
+    },
+    "subject": {
+     "reference": "urn:uuid:207c9f6c-a012-35b8-6a64-3531b7daea11",
+     "type": "Patient"
+    },
+    "authoredOn": "2025-06-15",
+    "dosageInstruction": [
+     {
+      "text": "Take 1 tablet once daily"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:20a87932-4c99-a6af-b693-07f8512d126e",
+   "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "20a87932-4c99-a6af-b693-07f8512d126e",
+    "status": "active",
+    "intent": "order",
+    "medicationCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+       "code": "617312",
+       "display": "Atorvastatin 20 MG Oral Tablet"
+      }
+     ],
+     "text": "Atorvastatin 20 MG Oral Tablet"
+    },
+    "subject": {
+     "reference": "urn:uuid:207c9f6c-a012-35b8-6a64-3531b7daea11",
+     "type": "Patient"
+    },
+    "authoredOn": "2024-05-07",
+    "dosageInstruction": [
+     {
+      "text": "Take 1 tablet once daily at night"
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:c8c259a2-166b-6525-a283-9f31f9061ffb",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "c8c259a2-166b-6525-a283-9f31f9061ffb",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "4548-4",
+       "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+     ],
+     "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+    },
+    "subject": {
+     "reference": "urn:uuid:207c9f6c-a012-35b8-6a64-3531b7daea11",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-01-27",
+    "valueQuantity": {
+     "value": 5.5,
+     "unit": "%"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:b9015459-661c-e41c-0a40-c9e8ff1a5c0c",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "b9015459-661c-e41c-0a40-c9e8ff1a5c0c",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8480-6",
+       "display": "Systolic blood pressure"
+      }
+     ],
+     "text": "Systolic blood pressure"
+    },
+    "subject": {
+     "reference": "urn:uuid:207c9f6c-a012-35b8-6a64-3531b7daea11",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-01-27",
+    "valueQuantity": {
+     "value": 150,
+     "unit": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:8b9f684a-67f1-86a2-e2b6-c50c8de63750",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "8b9f684a-67f1-86a2-e2b6-c50c8de63750",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8462-4",
+       "display": "Diastolic blood pressure"
+      }
+     ],
+     "text": "Diastolic blood pressure"
+    },
+    "subject": {
+     "reference": "urn:uuid:207c9f6c-a012-35b8-6a64-3531b7daea11",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-01-27",
+    "valueQuantity": {
+     "value": 95,
+     "unit": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:4ce76f14-6602-ec12-0cb9-1cbe92f48d21",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "4ce76f14-6602-ec12-0cb9-1cbe92f48d21",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "18262-6",
+       "display": "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Cholesterol in LDL [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "urn:uuid:207c9f6c-a012-35b8-6a64-3531b7daea11",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-01-27",
+    "valueQuantity": {
+     "value": 153,
+     "unit": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:309ff5b2-0be0-a71d-0197-05ee1bc6b08b",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "309ff5b2-0be0-a71d-0197-05ee1bc6b08b",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "33914-3",
+       "display": "Glomerular filtration rate/1.73 sq M.predicted"
+      }
+     ],
+     "text": "Glomerular filtration rate/1.73 sq M.predicted"
+    },
+    "subject": {
+     "reference": "urn:uuid:207c9f6c-a012-35b8-6a64-3531b7daea11",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-01-27",
+    "valueQuantity": {
+     "value": 92,
+     "unit": "mL/min/{1.73_m2}"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:9bd2d202-799d-149e-ebe2-eb3bd26c0cf8",
+   "resource": {
+    "resourceType": "Observation",
+    "id": "9bd2d202-799d-149e-ebe2-eb3bd26c0cf8",
+    "status": "final",
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "39156-5",
+       "display": "Body mass index (BMI) [Ratio]"
+      }
+     ],
+     "text": "Body mass index (BMI) [Ratio]"
+    },
+    "subject": {
+     "reference": "urn:uuid:207c9f6c-a012-35b8-6a64-3531b7daea11",
+     "type": "Patient"
+    },
+    "effectiveDateTime": "2026-01-27",
+    "valueQuantity": {
+     "value": 23.1,
+     "unit": "kg/m2"
+    }
+   }
+  }
+ ]
+}
