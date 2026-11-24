@@ -232,14 +232,6 @@ reports/          evaluation outputs
 - **Guardrails are deterministic and tested.** They're regex/rule-based, so they're fast, auditable and covered by unit tests, and the safety set includes benign controls to measure false positives. An LLM-based classifier can be layered on top in Phase 2.
 - **Everything runs offline.** The mock provider and hashing embeddings mean CI needs no secrets. Real providers are switched on through configuration.
 
-## Roadmap
-
-- ~~Phase 1: RAG, guardrails, evaluation, Docker, CI~~ done
-- ~~Phase 2: LangGraph agents with human-in-the-loop, Claude grader, Dagster~~ done
-- ~~Phase 3: Terraform for AWS, OIDC deploy pipeline, Postgres agent state, tracing and monitoring~~ done
-- **Next:** run the measured Claude evaluation, then a first real `apply` + deploy; optional Azure (Container Apps + Azure OpenAI) or GCP (Cloud Run + Vertex) variant of the infrastructure
-
-**Framework choice.** The agents use LangGraph because they need explicit control flow, durable pause/resume for human approval, and a step-by-step audit trail, which are the requirements for regulated workflows. CrewAI and LlamaIndex aren't used. Being able to explain that trade-off is more useful in an interview than having a shallow demo of every framework.
 
 ## License
 
